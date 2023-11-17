@@ -14,7 +14,7 @@
 //     dataSet
 // });
 
-let username = prompt("Bienvenido al portal de ejercicios JS, por favor ingrese su usuario:")
+const username = prompt("Bienvenido al portal de ejercicios JS, por favor ingrese su usuario:")
 
 
 function login(argumentos) {
@@ -41,6 +41,9 @@ let login_info = {
 };
 
 if (login(login_info)) {
-    alert("Bienvenido, " + login_info.user + "!")
+    let notificacion = "Bienvenido, " + login_info.user + "!"
+    alert(notificacion)
+    document.write('<h1>' + notificacion + '</h1>')
+    // comentarioss
 }
 
