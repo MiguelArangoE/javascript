@@ -188,6 +188,11 @@ function one(n) {
 
 }
 
+
+function scrollReset() {
+    window.scrollY = 0
+}
+
 // SEGUNDO
 
 const form = document.getElementById('form');
