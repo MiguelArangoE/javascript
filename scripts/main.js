@@ -131,25 +131,42 @@ const ejercicios = {
     [12]: {
         prompt: "Pedir un número, mostrar multiplos de 3 desde 1 hasta n.",
         function: function(values) {
-            return values
+            for (let i = 0; i <= values[0]; i++) { 
+                if (i % 3 == 0) {
+                    console.log(i)
+                }
+            }
+            return "console"
         }
     },
     [13]: {
         prompt: "Pedir un número, mostrar los números desde n hasta 0.",
         function: function(values) {
-            return values
+            for (let i = values[0]; i >= 0;) { 
+                console.log(i)
+                i--
+            }
+            return "console"
         }
     },
     [14]: {
         prompt: "Pedir un número, mostrar los números desde 0 hasta n.",
         function: function(values) {
-            return values
+            for (let i = 0; i >= values[0];) { 
+                console.log(i)
+                i++
+            }
+            return "console"
         }
     },
     [15]: {
         prompt: "Pedir un número, mostrar su tabla de multiplicar desde 0 hasta 10.",
         function: function(values) {
-            return values
+            for (let i = 0; i >= 10;) { 
+                console.log(`${values[0]} x ${i} = ${values[0] * i}`)
+                i++
+            }
+            return "console"
         }
     },
 }
@@ -167,6 +184,7 @@ function one(n) {
 
     if (typeof(numero) == "number" || ejercicios[numero]) {
         let respuesta = prompt(ejercicios[numero].prompt)
+        console.log(ejercicios[numero].prompt)
 
         let matches = respuesta.match(/\d+/g);
 
@@ -174,8 +192,8 @@ function one(n) {
 
         if (resultado && !(resultado == "console") == true && typeof(resultado) == "string" || typeof(resultado) == "number") {
             alert(resultado)
-            console.log(resultado)
-            console.log(!(resultado == "console") == true)
+            // console.log(resultado)
+            // console.log(!(resultado == "console") == true)
         } else if (resultado == "console") {
             alert("Revisar la consola.")
         }
