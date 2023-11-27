@@ -1,13 +1,94 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="es-co">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-main, initial-scale=1.0" />
+        <link rel="stylesheet" href="styles/main.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <title>JavaScript</title>
     </head>
+    
     <body>
-        HOLA
-        <script src="scripts/ejercicios.js"></script>
+        <header>
+            <nav id="title-icon">
+                <h1 id="title">{JS}</h1>
+                <p style="color: black; font-size: 1rem;">Ejercicios</p>
+            </nav>
+
+            <nav id="icons">
+                <a href="#" style="color: black;">
+                    <i class="fa-solid fa-house-user fa-lg icon"></i>
+                    Inicio
+                </p>
+                <a href="#" style="color: black;">
+                    <i class="fa-brands fa-github fa-xl icon"></i>
+                    Repositorio
+                </a>
+                <a href="#" style="color: black;">
+                    <i class="fa-solid fa-folder-open fa-lg icon"></i>
+                    Clase
+                </a>
+            </nav>
+
+            <!-- <div class="navbar">
+                <a href="#" class="link">Item</a>
+                <a href="#" class="link">Item</a>
+                <a href="#" class="link">Item</a>
+                <a href="#" class="link">Item</a>
+            </div> -->
+        </header>
+
+        <main>
+            <div class="title-container">
+                <p style="font-size: 3rem;">{</p>
+                    <h1 style="display: block; text-align: center; font-size: 3rem;">JavaScript</h1>
+                <p style="font-size: 3rem;">}</p>
+            </div>
+        </main>
+
+        <div class="example-container">
+            <aside>
+                <h3>Nivel 1</h3>
+                <p style="font-size: 2rem; text-align: center;">Casos</p>
+                
+                <ol>
+                    <li>Leer un número, mostrar el doble de n.</li>
+                    <li>Leer un número, mostrar la mitad de n.</li>
+                    <li>Leer un número, mostrar si es positivo, negativo o cero.</li>
+                    <li>Leer un número, mostrar si es par o impar.</li>
+                    <li>Leer dos números, mostrar el mayor.</li>
+                    <li>Leer dos números, mostrar operaciones básicas (+, -, x, /, %, cuadrado).</li>
+                    <li>Leer dos números, mostrar la suma dividido en la resta.</li>
+                    <li>Pedir un número y mostrar los números pares desde 1 hasta n.</li>
+                    <li>Pedir un número, mostrar la suma total desde 1 hasta n.</li>
+                    <li>Pedir un número, mostrar la suma de los números pares desde 1 hasta n.</li>
+                    <li>Pedir un número, mostrar la suma de los números impares desde 1 hasta n.</li>
+                    <li>Pedir un número, mostrar multiplos de 3 desde 1 hasta n.</li>
+                    <li>Pedir un número, mostrar los números desde n hasta 0.</li>
+                    <li>Pedir un número, mostrar los números desde 0 hasta n.</li>
+                    <li>Pedir un número, mostrar su tabla de multiplicar desde 0 hasta 10.</li>
+                </ol>
+                <button type="button" onclick="one()" >Ejecutar</button>
+            </aside>
+
+            <aside>
+                <h4>Nivel 2</h4>
+
+                <form id="form">
+                    <h2>Formulario</h2>
+                    <label>
+                        Escriba la temperatura que desea convertir.
+                        <input type="text" name="temp" placeholder="°F / °C">
+                        <input type="submit" value="Convertir">
+                    </label>
+                    <p id="message"></p>
+                    <!-- h2 con id=prompt / message / answers diciendo la temperatura -->
+                </form>
+            </aside>
+        </div>
+
+        <script src="scripts/main.js"></script>
     </body>
     <footer>
         

@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@200;400;600&family=Noto+Sans+Kawi&family=PT+Sans&family=Rubik:ital,wght@0,400;1,900&display=swap');
+
+:root {
+    --js-background-color: rgb(50, 50, 50);
+    --js-background: rgb(230, 210, 105);
+    --js-header-background: rgb(240, 219, 79);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+    color: white;
+}
+
+h3, h4, h5, h6 {
+    display: block;
+    font-size: 2rem;
+    text-align: center;
+}
+
+
+.icon {
+    color: black;
+}
+
+header {
+    display: flex;
+    align-items:center; /* Y */
+    justify-content: space-between; /* X */
+    position: fixed;
+    z-index: 2;
+    height: 60px;
+    width: 100%;
+    background-color: white;
+}
+
+header > * {
+    color: var(--js-text-color);
+    color: black;
+}
+
+#title {
+    display: block;
+    color: black;
+    font-size: 2rem;
+    text-align: left;
+    justify-content: flex-start;
+}
+
+
+#title-icon {
+    justify-content: flex-start;
+    padding-left: 2rem;
+}
+
+#icons {
+    justify-content: flex-end;
+    padding-right: 2rem;
+}
+
+
+
+#icons > * {
+    color: black;
+    font-weight: 600;
+    font-size: 1.25rem;
+    text-decoration: none;
+}
+
+header > #icons, div {
+    display: flex;
+    width: 50%;
+    justify-content: flex-end;
+    align-content: flex-start;
+    gap: 1rem;
+}
+
+body {
+    background-color: black;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.title-container {
+    outline: 0.2rem solid;
+    outline-color: white;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    max-width: 350px;
+    margin: 0 auto;
+    z-index: -1;
+}
+
+main {
+    padding-top: 100px;
+}
+
+main, .example-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+}
+
+.example-container {
+    padding: 5vh;
+    width: 100%;
+    flex-direction: column;
+}
+
+.example-container aside {
+    outline: 0.1rem solid;
+    outline-color: white;
+    margin: 2vh;
+    padding: 30px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+}
+
+ol {
+    padding-bottom: 10px;
+}
+
+ol li {
+    font-size: 1rem;
+    padding-bottom: 5px;
+    font-weight: 0;
+    text-align: left;
+    list-style-position: inside;
+}
+
+button, input {
+    background-color: transparent;
+    outline:0.1rem double;
+    outline-color: white;
+
+    color: white;
+    font-weight: 800;
+    font-size: 1rem;
+    padding: 10px;
+
+    border: none;
+    text-align: left;
+    text-decoration: none;
+}
+
+
+
+form > * {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    margin-bottom: 5px;
+}
+
+form label > * {
+    margin: 5px;
+}
+
+footer {
+
+}
