@@ -85,7 +85,7 @@ const ejercicios = {
             };
 
             let multiplier = 1
-            if (multiplier < 0) {
+            if (values[0] < 0) {
                 multiplier = -1
             }
 
