@@ -2,18 +2,80 @@
 
 const ejercicios = {
     [1]: {
+        prompt: "Preguntar nombre al usuario y saludarlo por su nombre.",
+        function: function(values) {
+            let nombre = prompt("Por favor digite su nombre.", "Miguel")
+            return alert(`Bienvenido, ${nombre}!`)
+        }
+    },
+    [2]: {
+        prompt: "Preguntar nombre al usuario y saludarlo por su nombre. Si el usuario no escribe su nombre saludar: Hola, desconocido.",
+        function: function(values) {
+            let user = prompt("Por favor digite su usuario.")
+            if (typeof(user) == "string" && user.length >= 3) {
+                alert(`¡Bienvenido, ${user}!`) 
+            } else {
+                alert("¡Bienvenido, Desconocido!")
+            }
+        }
+    },
+    [3]: {
+        prompt: "Leer nombre y apellido, saludar por nombre y apellido.",
+        function: function(values) {
+            let nombre = prompt("Por favor digite su nombre.")
+            let apellido = prompt("Por favor digite su apellido.")
+            alert(`¡Hola, ${nombre} ${apellido}!`)
+        }
+    },
+    [4]: {
+        prompt: "Pregunte al usuario si desea continuar, responder con hola o adiós.",
+        function: function(values) {
+            return 
+        }
+    },
+    [5]: {
+        prompt: "Leer nombre y edad, Mostrar si es o no mayor de edad.",
+        function: function(values) {
+            let nombre = prompt("¿Como te llamas?", "Miguel")
+            let edad = prompt("¿Cuantos años tienes?", 21)
+            if (nombre && edad || typeof(nombre) == "string" || typeof(edad) == "number") { // Ignorar los statements, son solo para testear.
+                if (edad >= 18) {
+                    alert("Eres mayor de edad.")
+                } else {
+                    alert("Eres menor de edad.")
+                }
+            }
+        }
+    },
+    [6]: {
+        prompt: "Leer un rol, (admin, ventas, cliente), acceso de acuerdo al rol.",
+        function: function(values) {
+            let rol = prompt("¿Cual es tú rol en la empresa? EJ: admin, ventas, cliente", "admin")
+            const roles = {
+                admin: "Eres administrador, redirigiendo al sitio administrativo...",
+                ventas: "Eres del sector de ventas, redirigiendo al sitio de marketing...",
+                cliete: "Eres un cliente, redirigiendo al lobby..."
+            }
+            if (roles[rol]) {
+                alert(roles[rol])
+            } else {
+                alert("Error: el rol digitado no es válido.")
+            }
+        }
+    },
+    [7]: {
         prompt: "Leer un número, mostrar el doble de n.",
         function: function(values) {
             return values[0] * 2
         }
     },
-    [2]: {
+    [8]: {
         prompt: "Leer un número, mostrar la mitad de n.",
         function: function(values) {
             return values[0] / 2
         }
     },
-    [3]: {
+    [9]: {
         prompt: "Leer un número, mostrar si es positivo, negativo o cero.",
         function: function(values) {
             const answers = {
@@ -24,7 +86,7 @@ const ejercicios = {
             return answers[values[0] / values[0]]
         }
     },
-    [4]: {
+    [10]: {
         prompt: "Leer un número, mostrar si es par o impar.",
         function: function(values) {
             const answers = {
@@ -34,7 +96,7 @@ const ejercicios = {
             return `${values[0]} ${answers[values[0] % 2 == 0]}`;
         }
     },
-    [5]: {
+    [11]: {
         prompt: "Leer dos números, mostrar el mayor.",
         function: function(values) {
             let numero_mayor = null
@@ -48,7 +110,7 @@ const ejercicios = {
             return `${numero_mayor} ES EL NÚMERO MAYOR`;
         }
     },
-    [6]: {
+    [12]: {
         prompt: "Leer dos números, mostrar operaciones básicas (+, -, x, /, %, cuadrado).",
         function: function(values) {
 
@@ -76,13 +138,13 @@ const ejercicios = {
             return "console"
         }
     },
-    [7]: {
+    [13]: {
         prompt: "Leer dos números, mostrar la suma dividido en la resta.",
         function: function(values) {
             return (values[0] + values[1]) / values.length
         }
     },
-    [8]: {
+    [14]: {
         prompt: "Pedir un número y mostrar los números pares desde 1 hasta n.",
         function: function(values) {
             for (let i = 0; i <= values[0]; i++) { 
@@ -93,7 +155,7 @@ const ejercicios = {
             return "console"
         }
     },
-    [9]: {
+    [15]: {
         prompt: "Pedir un número, mostrar la suma total desde 1 hasta n.",
         function: function(values) {
             for (let i = 0; i <= values[0]; i++) { 
@@ -102,7 +164,7 @@ const ejercicios = {
             return "console"
         }
     },
-    [10]: {
+    [16]: {
         prompt: "Pedir un número, mostrar la suma de los números pares desde 1 hasta n.",
         function: function(values) {
             let number = 0
@@ -115,7 +177,7 @@ const ejercicios = {
             return "console"
         }
     },
-    [11]: {
+    [17]: {
         prompt: "Pedir un número, mostrar la suma de los números impares desde 1 hasta n.",
         function: function(values) {
             let number = 0
@@ -128,7 +190,7 @@ const ejercicios = {
             return "console"
         }
     },
-    [12]: {
+    [18]: {
         prompt: "Pedir un número, mostrar multiplos de 3 desde 1 hasta n.",
         function: function(values) {
             for (let i = 0; i <= values[0]; i++) { 
@@ -139,7 +201,7 @@ const ejercicios = {
             return "console"
         }
     },
-    [13]: {
+    [19]: {
         prompt: "Pedir un número, mostrar los números desde n hasta 0.",
         function: function(values) {
             for (let i = values[0]; i >= 0;) { 
@@ -149,7 +211,7 @@ const ejercicios = {
             return "console"
         }
     },
-    [14]: {
+    [20]: {
         prompt: "Pedir un número, mostrar los números desde 0 hasta n.",
         function: function(values) {
             for (let i = 0; i >= values[0];) { 
@@ -159,7 +221,7 @@ const ejercicios = {
             return "console"
         }
     },
-    [15]: {
+    [21]: {
         prompt: "Pedir un número, mostrar su tabla de multiplicar desde 0 hasta 10.",
         function: function(values) {
             for (let i = 0; i >= 10;) { 
@@ -169,6 +231,31 @@ const ejercicios = {
             return "console"
         }
     },
+    [22]: {
+        prompt: "Adivinar el número, leer un número y decir si adivinó el número.",
+        function: function(values) {
+            let numeroAleatorio = Math.floor(Math.random() * 10) + 1;
+            let numeroUsuario = null;
+            console.log(numeroAleatorio)
+
+
+            while (numeroUsuario != numeroAleatorio) {
+                numeroUsuario = prompt("Escribe un numero entre el 1 y 10.")
+            }
+            alert(`Adivinaste, el número era ${numeroAleatorio}; ¡Felicidades!`)
+        }
+    },
+}
+
+let list = document.getElementById("case-list")
+console.log(list)
+
+for (let i = 1; i <= Object.keys(ejercicios).length; i++) {
+    console.log(i, ejercicios[i], "yes")
+    let li = document.createElement("li")
+    // li.innerHTML = ejercicios[i].prompt | ESTE METODO TAMBIÉN FUNCIONA.
+    li.appendChild(document.createTextNode(ejercicios[i].prompt))
+    list.appendChild(li)
 }
 
 function alert_and_retry() {
@@ -176,6 +263,15 @@ function alert_and_retry() {
     one()
 }
 
+const users = {
+    ["admin"]: 123,
+}
+
+function usuario() {
+    let user = prompt("Escriba su usuario.")
+    let password = prompt("Escriba su contraseña.")
+
+}
 
 function one(n) {
     let numero = prompt("Bienvenido al portal de ejercicios JS, por favor indique el ejercicio a realizar:");
@@ -183,14 +279,20 @@ function one(n) {
     // switch or ifs
 
     if (typeof(numero) == "number" || ejercicios[numero]) {
-        let respuesta = prompt(ejercicios[numero].prompt)
-        console.log(ejercicios[numero].prompt)
+        let respuesta
+        let matches
 
-        let matches = respuesta.match(/\d+/g);
+        if (numero > 6) {
+            respuesta = prompt(ejercicios[numero].prompt)
+            matches = respuesta.match(/\d+/g);
+        } else {
+            alert(ejercicios[numero].prompt)
+        }
+        
 
         let resultado = ejercicios[numero].function(matches)
 
-        if (resultado && !(resultado == "console") == true && typeof(resultado) == "string" || typeof(resultado) == "number") {
+        if (resultado && !(resultado == "console") == true && numero >= 7 || typeof(resultado) == "string" || typeof(resultado) == "number") {
             alert(resultado)
             // console.log(resultado)
             // console.log(!(resultado == "console") == true)
