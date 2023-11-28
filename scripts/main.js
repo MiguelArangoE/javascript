@@ -83,7 +83,13 @@ const ejercicios = {
                 [0]: 'ES CERO',
                 [-1]: 'ES NEGATIVO',
             };
-            return answers[values[0] / values[0]]
+
+            let multiplier = 1
+            if (multiplier < 0) {
+                multiplier = -1
+            }
+
+            return answers[(values[0] / values[0]) * multiplier]
         }
     },
     [10]: {
