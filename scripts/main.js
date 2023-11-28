@@ -54,7 +54,7 @@ const ejercicios = {
             const roles = {
                 admin: "Eres administrador, redirigiendo al sitio administrativo...",
                 ventas: "Eres del sector de ventas, redirigiendo al sitio de marketing...",
-                cliete: "Eres un cliente, redirigiendo al lobby..."
+                cliente: "Eres un cliente, redirigiendo al lobby..."
             }
             if (roles[rol]) {
                 alert(roles[rol])
@@ -78,15 +78,20 @@ const ejercicios = {
     [9]: {
         prompt: "Leer un número, mostrar si es positivo, negativo o cero.",
         function: function(values) {
+            // const answers = {
+            //     [1]: 'ES POSITIVO',
+            //     [0]: 'ES CERO',
+            //     [-1]: 'ES NEGATIVO',
+            // };
             const answers = {
-                [1]: 'ES POSITIVO',
-                [0]: 'ES CERO',
-                [-1]: 'ES NEGATIVO',
-            };
+                [true]: "ES POSITIVO",
+                [false]: "ES NEGATIVO"
+            }
 
-            let multiplier = 1
-            if (values[0] < 0) {
-                multiplier = -1
+            if (values[0] == 0) {
+                alert("ES CERO")
+            } else {
+                alert(answers[values[0] > 0])
             }
 
             return answers[(values[0] / values[0]) * multiplier]
@@ -244,9 +249,16 @@ const ejercicios = {
             let numeroUsuario = null;
             console.log(numeroAleatorio)
 
+            const mayor_o_menor = {
+                [true]: "El número ingresado es mayor.",
+                [false]: "El número ingresado es menor.",
+            }
 
             while (numeroUsuario != numeroAleatorio) {
                 numeroUsuario = prompt("Escribe un numero entre el 1 y 10.")
+                if (numeroUsuario != numeroAleatorio) {
+                    alert(mayor_o_menor[numeroUsuario > numeroAleatorio])
+                }
             }
             alert(`Adivinaste, el número era ${numeroAleatorio}; ¡Felicidades!`)
         }
@@ -298,7 +310,7 @@ function one(n) {
 
         let resultado = ejercicios[numero].function(matches)
 
-        if (resultado && !(resultado == "console") == true && numero >= 7 || typeof(resultado) == "string" || typeof(resultado) == "number") {
+        if (resultado && (resultado != "console") == true && numero >= 7 && typeof(resultado) == "string" || typeof(resultado) == "number") {
             alert(resultado)
             // console.log(resultado)
             // console.log(!(resultado == "console") == true)
