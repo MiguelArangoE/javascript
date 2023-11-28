@@ -253,7 +253,7 @@ console.log(list)
 for (let i = 1; i <= Object.keys(ejercicios).length; i++) {
     console.log(i, ejercicios[i], "yes")
     let li = document.createElement("li")
-    // li.innerHTML = ejercicios[i].prompt | ESTE METODO TAMBIÉN FUNCIONA.
+    // li.innerHTML = ejercicios[i].prompt | ESTE METODO TAMBIÉN FUNCIONA!
     li.appendChild(document.createTextNode(ejercicios[i].prompt))
     list.appendChild(li)
 }
